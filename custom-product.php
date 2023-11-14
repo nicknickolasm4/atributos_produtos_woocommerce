@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:         Product Fields Woocommerce (Nickolas Mariano)
+ * Plugin Name:         Product Fields (Nickolas Mariano)
  * Plugin URI:           https://github.com/nicknickolasm4/atributos_produtos_woocommerce
  * Description:          Adiciona campos personalizados (EAN, NCM, GTIN) aos produtos do WooCommerce.
  * Author:               Nickolas Mariano
