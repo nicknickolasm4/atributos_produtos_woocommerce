@@ -2,7 +2,7 @@
 /*
 Plugin Name: (EAN, NCM, GTIN) Product Fields
 Description: Adiciona campos personalizados (EAN, NCM, GTIN) aos produtos do WooCommerce.
-Version: 1.1
+Version: 1.2
 Author: Nickolas Mariano
 */
 
@@ -32,12 +32,12 @@ function adicionar_campos_personalizados() {
         )
     );
 
-    // Adiciona campo TT
+    // Adiciona campo GTIN
     woocommerce_wp_text_input(
         array(
-            'id'          => '_tt',
-            'label'       => 'TT',
-            'placeholder' => 'Digite o código TT',
+            'id'          => '_gtin',
+            'label'       => 'GTIN',
+            'placeholder' => 'Digite o código GTIN',
             'desc_tip'    => 'true',
         )
     );
@@ -55,9 +55,9 @@ function salvar_campos_personalizados($post_id) {
     $ncm = sanitize_text_field($_POST['_ncm']);
     update_post_meta($post_id, '_ncm', $ncm);
 
-    // Salva valor do campo TT
-    $tt = sanitize_text_field($_POST['_tt']);
-    update_post_meta($post_id, '_tt', $tt);
+    // Salva valor do campo GTIN
+    $gtin = sanitize_text_field($_POST['_gtin']);
+    update_post_meta($post_id, '_gtin', $gtin);
 }
 
 add_action('woocommerce_process_product_meta', 'salvar_campos_personalizados');
@@ -69,12 +69,12 @@ function exibir_campos_personalizados() {
     // Obtém valores dos campos EAN, NCM e TT
     $ean = get_post_meta($product->get_id(), '_ean', true);
     $ncm = get_post_meta($product->get_id(), '_ncm', true);
-    $tt  = get_post_meta($product->get_id(), '_tt', true);
+    $gtin  = get_post_meta($product->get_id(), '_gtin', true);
 
     // Exibe os valores
     echo '<p><strong>EAN:</strong> ' . esc_html($ean) . '</p>';
     echo '<p><strong>NCM:</strong> ' . esc_html($ncm) . '</p>';
-    echo '<p><strong>TT:</strong> ' . esc_html($tt) . '</p>';
+    echo '<p><strong>GTIN:</strong> ' . esc_html($gtin) . '</p>';
 }
 
 add_action('woocommerce_single_product_summary', 'exibir_campos_personalizados', 25);
