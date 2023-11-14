@@ -1,13 +1,5 @@
 === (EAN, NCM, GTIN) Product Fields ===
-Requires PHP: 7.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Adiciona campos personalizados (EAN, NCM, GTIN) aos produtos do WooCommerce.
-
-
-=== (EAN, NCM, GTIN) Product Fields ===
 Contributors: nicknickolasm4
-Donate link: https://fernandoacosta.net
 Tags:  woocommerce, ncm, ean, autocomplete, gtin
 Requires at least: 5.0.0
 Tested up to: 6.0
