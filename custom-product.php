@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: (EAN, NCM, GTIN) Product Fields
+Plugin Name: Product Fields Woocommerce (Nickolas Mariano)
 Description: Adiciona campos personalizados (EAN, NCM, GTIN) aos produtos do WooCommerce.
 Version: 1.2
 Author: Nickolas Mariano
